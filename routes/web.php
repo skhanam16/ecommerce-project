@@ -17,15 +17,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', function () {
-    // dd(App());
-    /*
-    $array['name1'] = 'Some name for this test';
-    $array['name2'] = 'Some name for this test';
-    $array['name3'] = 'Some name for this test';
-    $array2['names'] = $array;
-    return view('welcome');
-    */
-    // return redirect('about');
+return view('home');
 });
 
 Route::get('/about', function() {
