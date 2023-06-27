@@ -23,26 +23,17 @@ return view('home');
 Route::get('/about', function() {
     return view('about');
  });
-    /*
-    Route::get('/user/{id}/{product}', function($id, $product){
-    // echo $id;
-    $me = 'Sometext';
-    //return view('user', ['id' =>$id, 'product' =>$product]);
-    $arr = ['id' =>$id, 'product' =>$product];
-    return view('user', $arr);
-    });
-    */
+
+ Route::get('/contact', function() {
+    return view('contact');
+ });
+
 
 Route::get('/user', [UserController::class, 'index']);
-Route::get('/signup', [SignupController::class, 'index']);
 
-Route::get('/test-one', function () {
-   app()->make('first_service_provider');
-});
+Route::any('/signup', [SignupController::class, 'index']);
 
-// Route::view('\user', 'user');
-
-
+//__ignore it__
 
 Route::get('/dashboard', function () {
     return view('dashboard');

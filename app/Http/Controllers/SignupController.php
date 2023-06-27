@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 class SignupController extends Controller
 {
-    public function index(){
-        return "Hello world from SignupController";
+    public function index(Request $request){
+print_r($request->all());
+    echo "Hello world";
+        return view('signup');
     }
 }
